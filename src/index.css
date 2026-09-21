@@ -1,0 +1,65 @@
+@import url('https://miaoda.feishu.cn/fonts/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./tailwind-theme.css";
+@import "./typography.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(220 12% 5%);
+  color: hsl(220 12% 91%);
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'PingFang SC',
+    'Microsoft Yahei', 'Hiragino Sans GB', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: hsl(4 58% 54% / 0.35);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(220 12% 5%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(220 8% 22%);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(220 8% 30%);
+}
+
+/* animated red glow for cards */
+@keyframes redGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 1px hsl(4 58% 54% / 0.12), 0 0 18px hsl(4 58% 54% / 0.06);
+  }
+  50% {
+    box-shadow: 0 0 0 1px hsl(4 58% 54% / 0.28), 0 0 28px hsl(4 58% 54% / 0.14);
+  }
+}
+.card-glow {
+  animation: redGlow 4s ease-in-out infinite;
+}
+
+/* animated drifting red gradient for the contact closing section */
+@keyframes redDrift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-6%, 4%) scale(1.15);
+    opacity: 1;
+  }
+}
+.red-drift {
+  animation: redDrift 12s ease-in-out infinite;
+}
