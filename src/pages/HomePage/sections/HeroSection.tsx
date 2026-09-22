@@ -72,21 +72,21 @@ export default function HeroSection() {
       />
 
       <div className="relative mx-auto w-full px-0" style={{ maxWidth: 1700 }}>
-        <p className="hero-fade px-8 pt-28 text-xs tracking-[0.4em] text-primary">
+        <p className="hero-fade px-5 pt-28 text-[10px] tracking-[0.3em] text-primary md:px-8 md:text-xs">
           PORTFOLIO · 2026 · {CONTACT.name}
         </p>
 
-        <h1 className="mt-8 select-none font-bold leading-[0.85] tracking-tight text-primary">
-          <span className="hero-line block text-[16vw] md:text-[13rem]">法言</span>
+        <h1 className="mt-6 select-none font-bold leading-[0.85] tracking-tight text-primary md:mt-8">
+          <span className="hero-line block text-[20vw] md:text-[13rem]">法言</span>
         </h1>
 
         <h1 className="select-none font-bold leading-[0.85] tracking-tight text-foreground">
-          <span className="hero-line block text-[16vw] md:text-[13rem]">有声</span>
+          <span className="hero-line block text-[20vw] md:text-[13rem]">有声</span>
         </h1>
 
-        <div className="mt-8 flex items-end justify-between gap-12 px-8">
+        <div className="mt-6 flex items-end justify-between gap-8 px-5 md:mt-8 md:gap-12 md:px-8">
           <h1 className="select-none font-bold leading-[0.9] tracking-tight text-primary">
-            <span className="hero-line block text-[7vw] md:text-[5.5rem]">
+            <span className="hero-line block text-[6vw] md:text-[5.5rem]">
               把法律讲给普通人听。
             </span>
           </h1>
@@ -97,12 +97,12 @@ export default function HeroSection() {
           </p>
         </div>
 
-        <div className="mt-12 flex items-center gap-4 px-8 pb-20">
+        <div className="mt-8 flex items-center gap-3 px-5 pb-16 md:mt-12 md:gap-4 md:px-8 md:pb-20">
           <button
             onClick={() =>
               document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })
             }
-            className="hero-cta rounded-full bg-primary px-7 py-3 text-sm font-medium text-primary-foreground transition-colors duration-300 hover:bg-[hsl(4_70%_60%)]"
+            className="hero-cta rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors duration-300 hover:bg-[hsl(4_70%_60%)] md:px-7 md:py-3"
           >
             看作品
           </button>
@@ -110,7 +110,7 @@ export default function HeroSection() {
             onClick={() =>
               document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
             }
-            className="hero-cta rounded-full border border-primary/40 px-7 py-3 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+            className="hero-cta rounded-full border border-primary/40 px-5 py-2.5 text-sm font-medium text-foreground transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground md:px-7 md:py-3"
           >
             联系我
           </button>

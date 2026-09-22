@@ -48,21 +48,21 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <section ref={root} id="work" className="scroll-mt-16 py-32">
-      <div className="mx-auto w-full px-8" style={{ maxWidth: 1700 }}>
-        <div className="work-head mb-16 flex items-end justify-between">
+    <section ref={root} id="work" className="scroll-mt-16 py-16 md:py-32">
+      <div className="mx-auto w-full px-5 md:px-8" style={{ maxWidth: 1700 }}>
+        <div className="work-head mb-8 flex items-end justify-between md:mb-16">
           <div className="flex items-baseline gap-4">
             <span className="text-sm tracking-[0.3em] text-primary">02</span>
-            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">精选作品</h2>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-4xl">精选作品</h2>
           </div>
-          <p className="text-sm text-muted-foreground">抖音号「法言有声」部分代表作品</p>
+          <p className="text-xs text-muted-foreground md:text-sm">抖音号「法言有声」部分代表作品</p>
         </div>
 
         <div className="work-list border-t border-border">
           {PROJECTS.map((p, i) => (
             <div
               key={p.id}
-              className="work-row group relative grid grid-cols-12 items-center gap-6 border-b border-border py-10 transition-colors duration-300 hover:bg-card"
+              className="work-row group relative grid grid-cols-12 items-center gap-3 border-b border-border py-6 transition-colors duration-300 hover:bg-card md:gap-6 md:py-10"
             >
               <div className="col-span-2 md:col-span-1">
                 <span className="text-sm font-medium text-primary">
@@ -71,10 +71,10 @@ export default function ProjectsSection() {
               </div>
 
               <div className="col-span-10 md:col-span-7">
-                <h3 className="text-2xl font-semibold leading-snug text-foreground transition-colors duration-300 group-hover:text-primary md:text-3xl">
+                <h3 className="text-xl font-semibold leading-snug text-foreground transition-colors duration-300 group-hover:text-primary md:text-3xl">
                   {p.title}
                 </h3>
-                <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
+                <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-muted-foreground md:mt-3 md:text-xs">
                   <span>{p.topic}</span>
                   <span className="text-border">·</span>
                   <span>{p.published}</span>
@@ -87,13 +87,13 @@ export default function ProjectsSection() {
                 </div>
               </div>
 
-              <div className="col-span-8 flex gap-8 md:col-span-3">
+              <div className="col-span-10 col-start-3 flex gap-6 md:col-span-3 md:col-start-auto md:gap-8">
                 <div>
-                  <div className="text-lg font-semibold text-foreground">{p.plays}</div>
+                  <div className="text-base font-semibold text-foreground md:text-lg">{p.plays}</div>
                   <div className="mt-0.5 text-[10px] tracking-wider text-muted-foreground">播放</div>
                 </div>
                 <div>
-                  <div className="text-lg font-semibold text-foreground">{p.likes}</div>
+                  <div className="text-base font-semibold text-foreground md:text-lg">{p.likes}</div>
                   <div className="mt-0.5 text-[10px] tracking-wider text-muted-foreground">点赞</div>
                 </div>
               </div>

@@ -52,19 +52,19 @@ export default function ContactSection() {
         />
       </div>
 
-      <div className="relative mx-auto w-full px-8" style={{ maxWidth: 1700 }}>
+      <div className="relative mx-auto w-full px-5 md:px-8" style={{ maxWidth: 1700 }}>
         <p className="contact-head mb-6 text-sm tracking-[0.3em] text-primary">04</p>
-        <h2 className="contact-head max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl">
+        <h2 className="contact-head max-w-4xl text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl">
           一起做<span className="text-primary">有用的内容</span>。
         </h2>
-        <p className="contact-head mt-8 max-w-lg text-lg text-muted-foreground">
+        <p className="contact-head mt-6 max-w-lg text-base text-muted-foreground md:mt-8 md:text-lg">
           正在寻找新媒体运营 / 短视频内容方向的实习机会。可每周到岗 5 天、持续 6 个月以上，随时入职。
         </p>
 
-        <div className="contact-grid mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
+        <div className="contact-grid mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-border bg-border md:mt-16 md:grid-cols-3">
           <a
             href={`tel:${CONTACT.phone}`}
-            className="contact-card group card-glow bg-card p-8 transition-colors duration-300 hover:bg-[hsl(4_30%_12%)]"
+            className="contact-card group card-glow bg-card p-6 transition-colors duration-300 hover:bg-[hsl(4_30%_12%)] md:p-8"
           >
             <Phone className="h-5 w-5 text-primary" />
             <div className="mt-6 text-xs tracking-wider text-muted-foreground">电话</div>
@@ -76,7 +76,7 @@ export default function ContactSection() {
 
           <a
             href={`mailto:${CONTACT.email}`}
-            className="contact-card group card-glow bg-card p-8 transition-colors duration-300 hover:bg-[hsl(4_30%_12%)]"
+            className="contact-card group card-glow bg-card p-6 transition-colors duration-300 hover:bg-[hsl(4_30%_12%)] md:p-8"
           >
             <Mail className="h-5 w-5 text-primary" />
             <div className="mt-6 text-xs tracking-wider text-muted-foreground">邮箱</div>
@@ -90,7 +90,7 @@ export default function ContactSection() {
             href={CONTACT.douyin}
             target="_blank"
             rel="noreferrer"
-            className="contact-card group card-glow bg-card p-8 transition-colors duration-300 hover:bg-[hsl(4_30%_12%)]"
+            className="contact-card group card-glow bg-card p-6 transition-colors duration-300 hover:bg-[hsl(4_30%_12%)] md:p-8"
           >
             <MessageCircle className="h-5 w-5 text-primary" />
             <div className="mt-6 text-xs tracking-wider text-muted-foreground">
@@ -103,7 +103,7 @@ export default function ContactSection() {
           </a>
         </div>
 
-        <p className="mt-20 text-xs text-muted-foreground">
+        <p className="mt-12 text-xs text-muted-foreground md:mt-20">
           © 2026 周腾峰 · 法言有声 · Built with React + Vite
         </p>
       </div>

@@ -51,7 +51,7 @@ export const Layout = () => {
         }`}
       >
         <div
-          className="mx-auto flex items-center justify-between px-8"
+          className="mx-auto flex items-center justify-between px-5 md:px-8"
           style={{ maxWidth: 1700, height: 64 }}
         >
           <button
@@ -62,7 +62,7 @@ export const Layout = () => {
             <span className="text-xs text-muted-foreground">/ ZTF</span>
           </button>
 
-          <nav className="flex items-center gap-1">
+          <nav className="hidden items-center gap-1 md:flex">
             {NAV.map((n) => (
               <button
                 key={n.id}
@@ -83,6 +83,12 @@ export const Layout = () => {
               联系我
             </button>
           </nav>
+          <button
+            onClick={() => scrollTo('contact')}
+            className="rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground transition-colors duration-300 hover:bg-[hsl(4_70%_60%)] md:hidden"
+          >
+            联系我
+          </button>
         </div>
       </header>
 

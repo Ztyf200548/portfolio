@@ -73,16 +73,16 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section ref={root} id="about" className="scroll-mt-16 py-32">
-      <div className="mx-auto w-full px-8" style={{ maxWidth: 1700 }}>
-        <div className="about-head mb-16 flex items-baseline gap-4">
+    <section ref={root} id="about" className="scroll-mt-16 py-16 md:py-32">
+      <div className="mx-auto w-full px-5 md:px-8" style={{ maxWidth: 1700 }}>
+        <div className="about-head mb-10 flex items-baseline gap-4 md:mb-16">
           <span className="text-sm tracking-[0.3em] text-primary">01</span>
-          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">关于我</h2>
+          <h2 className="text-2xl font-semibold tracking-tight md:text-4xl">关于我</h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="about-portrait lg:col-span-4">
-            <div className="aspect-[3/4] w-full max-w-sm overflow-hidden rounded-sm border border-border">
+            <div className="aspect-[3/4] w-full max-w-xs overflow-hidden rounded-sm border border-border md:max-w-sm">
               <img
                 src={img('portrait.jpg')}
                 alt="周腾峰"
@@ -93,7 +93,7 @@ export default function AboutSection() {
           </div>
 
           <div className="lg:col-span-5">
-            <h3 className="about-text text-2xl font-medium leading-snug text-foreground">
+            <h3 className="about-text text-xl font-medium leading-snug text-foreground md:text-2xl">
               建筑学背景出身，却把法律科普做成了
               <span className="text-primary">近千万播放</span>的账号。
             </h3>
@@ -130,8 +130,8 @@ export default function AboutSection() {
           <div className="lg:col-span-3">
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border">
               {ACCOUNT_STATS.map((s) => (
-                <div key={s.label} className="about-stat card-glow bg-card p-6">
-                  <div className="text-3xl font-bold tracking-tight text-foreground">
+                <div key={s.label} className="about-stat card-glow bg-card p-4 md:p-6">
+                  <div className="text-2xl font-bold tracking-tight text-foreground md:text-3xl">
                     {s.value}
                   </div>
                   <div className="mt-1 text-xs tracking-wider text-muted-foreground">

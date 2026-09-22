@@ -36,18 +36,18 @@ export default function SkillsSection() {
   }, []);
 
   return (
-    <section ref={root} id="skills" className="scroll-mt-16 border-t border-border py-32">
-      <div className="mx-auto w-full px-8" style={{ maxWidth: 1700 }}>
-        <div className="skill-head mb-16 flex items-baseline gap-4">
+    <section ref={root} id="skills" className="scroll-mt-16 border-t border-border py-16 md:py-32">
+      <div className="mx-auto w-full px-5 md:px-8" style={{ maxWidth: 1700 }}>
+        <div className="skill-head mb-8 flex items-baseline gap-4 md:mb-16">
           <span className="text-sm tracking-[0.3em] text-primary">03</span>
-          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">我能做什么</h2>
+          <h2 className="text-2xl font-semibold tracking-tight md:text-4xl">我能做什么</h2>
         </div>
 
         <div className="skill-grid grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
           {SKILLS.map((s) => (
             <div
               key={s.title}
-              className="skill-card card-glow group bg-card p-10 transition-colors duration-300 hover:bg-[hsl(4_30%_12%)]"
+              className="skill-card card-glow group bg-card p-6 transition-colors duration-300 hover:bg-[hsl(4_30%_12%)] md:p-10"
             >
               <h3 className="text-xl font-semibold text-foreground">{s.title}</h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">{s.desc}</p>
